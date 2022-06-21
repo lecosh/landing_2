@@ -180,6 +180,15 @@ img {
   flex-wrap: wrap;
   align-items: center;
 }
+.hotel-grid {
+  display: flex;
+  justify-content: space-between;
+}
+.hotel-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 .stars {
   flex-basis: 100%;
@@ -251,6 +260,102 @@ img {
 .slider-button--next {
   right: 18px;
   background-image: url(../img/arrow-next.svg);
+}
+
+.booking {
+  border-radius: 8px;
+  width: 350px;
+  min-height: 210px;
+  padding: 28px;
+  background-color: #0A223D;
+  color: #fff;
+}
+.booking__info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 9px;
+}
+.booking__price {
+  display: flex;
+  flex-direction: column;
+}
+.booking__start {
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 14px;
+}
+.booking__pricetag {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+  font-style: normal;
+}
+.booking__per-room {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+.booking__room {
+  margin-top: 4px;
+}
+.booking__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.booking__description {
+  margin-left: 9px;
+}
+.booking__call-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 17px;
+}
+.booking__heading {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+}
+.booking_number {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+}
+.booking__num {
+  margin-left: 8px;
+  color: #fff;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+}
+.booking__button {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  width: 100%;
+  min-height: 45px;
+  border-radius: 4px;
+  background-color: #EC1F46;
+  color: #fff;
+}
+
+.map {
+  width: 347px;
+  height: 213px;
+}
+.map > iframe {
+  border-radius: 8px;
 }
 
 @media (max-width: 1200px) {
