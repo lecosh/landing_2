@@ -5,11 +5,20 @@
 body {
   font-family: "Mulish", sans-serif;
   color: #333333;
+  background-color: #F5FAFE;
 }
 
 .container {
   max-width: 1110px;
   margin: auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
 }
 
 button {
@@ -120,6 +129,87 @@ img {
   color: #333333;
 }
 
+.breadcrumb-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 18px 0;
+  margin: 0;
+}
+.breadcrumb-list__item {
+  font-size: 12px;
+  line-height: 13px;
+}
+.breadcrumb-list__item:nth-last-child(n+2)::after {
+  content: "/";
+  margin-right: 4px;
+}
+.breadcrumb-list__link {
+  color: inherit;
+}
+
+.hotel {
+  padding-top: 23px;
+  padding-bottom: 70px;
+}
+.hotel-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hotel-info__offer {
+  margin-left: 14px;
+  margin-top: 4px;
+}
+.hotel-info__description {
+  margin: 0;
+}
+.hotel-description {
+  font-size: 12px;
+  line-height: 15px;
+  margin: 5px 0;
+}
+.hotel-name {
+  line-height: 30px;
+  font-size: 24px;
+  margin-top: 4px;
+}
+.hotel-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.stars {
+  flex-basis: 100%;
+}
+
+.offer {
+  font-size: 10px;
+  line-height: 13px;
+  padding: 4px 9px;
+  background-color: #EC1F46;
+  border-radius: 3px;
+  color: #fff;
+}
+
+.rating {
+  max-width: 65px;
+  min-height: 45px;
+  text-align: center;
+  color: #fff;
+  background-color: #EC1F46;
+  border-radius: 4px;
+}
+.rating__text {
+  font-size: 8px;
+  line-height: 10px;
+}
+.rating__counter {
+  font-size: 14px;
+  line-height: 18px;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
@@ -175,6 +265,27 @@ img {
     width: 16px;
     height: 2px;
     background-color: #333333;
+  }
+
+  .stars {
+    flex-basis: content;
+  }
+
+  .hotel-name {
+    flex-basis: 100%;
+  }
+  .hotel-wrapper {
+    justify-content: space-between;
+  }
+  .hotel-info__left {
+    width: 100%;
+  }
+  .hotel-info__rating {
+    display: none;
+  }
+  .hotel-info__offer {
+    order: -1;
+    margin-left: 0;
   }
 }
 @media (max-width: 576px) {
