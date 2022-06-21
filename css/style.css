@@ -1,10 +1,9 @@
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
   color: #333333;
 }
 
@@ -28,43 +27,55 @@ a {
   text-decoration: none;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 li {
   list-style-type: none;
 }
 
-.header {
+.navbar {
   background-color: #fff;
 }
-
-.header-top {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.navbar-top {
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
 }
-
-.header__search {
+.navbar-bottom {
+  background-color: #0A223D;
+}
+.navbar__search {
   margin-right: auto;
   margin-left: 108px;
 }
+.navbar-menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 31px 0;
+}
+.navbar-menu__link {
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 18px;
+}
+
+.logo {
+  width: 177px;
+  height: auto;
+}
 
 .search {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
   overflow: hidden;
   border-radius: 6px;
   height: 40px;
 }
-
 .search__input {
   width: 350px;
   height: 100%;
@@ -75,7 +86,6 @@ li {
   padding-right: 80px;
   color: #333333;
 }
-
 .search__button {
   position: absolute;
   height: 100%;
@@ -86,14 +96,9 @@ li {
 }
 
 .user {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .user__img {
   width: 40px;
   height: 40px;
@@ -101,11 +106,43 @@ li {
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 .user__name {
   margin-left: 18px;
   font-size: 18px;
   line-height: 18px;
   color: #333333;
 }
-/*# sourceMappingURL=style.css.map */
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 700px;
+  }
+
+  .navbar-top {
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+  .navbar__search {
+    margin-left: auto;
+    max-width: 340px;
+  }
+  .navbar-menu {
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+  .navbar-menu__link {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 576px;
+    width: 92%;
+  }
+}/*# sourceMappingURL=style.css.map */
