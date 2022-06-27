@@ -662,6 +662,23 @@ img {
   color: #BDBDBD;
 }
 
+@-webkit-keyframes menu-open {
+  0% {
+    top: 100vh;
+  }
+  100% {
+    top: 79px;
+  }
+}
+
+@keyframes menu-open {
+  0% {
+    top: 100vh;
+  }
+  100% {
+    top: 79px;
+  }
+}
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
@@ -787,6 +804,14 @@ img {
   }
   .navbar-bottom--visible {
     display: block;
+    -webkit-animation-name: menu-open;
+            animation-name: menu-open;
+    -webkit-animation-duration: 0.3s;
+            animation-duration: 0.3s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: easy;
+            animation-timing-function: easy;
   }
   .navbar-mobile--fixed {
     position: fixed;
