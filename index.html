@@ -164,7 +164,7 @@
                                     <span class="booking__num">12100</span>
                                 </a>                        
                         </div>
-                        <button class="button booking__button">View Other Options</button>
+                        <button data-toggle="modal" class="button booking__button">View Other Options</button>
                     </div>
                     <!-- /.booking -->
                     <div class="map">
@@ -308,9 +308,14 @@
                 </div>
                 <div class="footer__contact-form">
                     <h3 class="footer__title">Send us a message</h3>
-                    <form action="" class="footer__form">
-                        <input type="text" class="input footer__input" placeholder="Your Full Name*">
-                        <input type="text" class="input footer__input" placeholder="Phone Number*">
+                    <form action="send.php" method="POST" class="footer__form">
+                        <input
+                            type="text"
+                            class="input footer__input"
+                            placeholder="Your Full Name*"
+                            name="name"
+                        />
+                        <input type="text" class="input footer__input" placeholder="Phone Number*"name="phone" name="message">
                         <textarea cols="30" rows="10" class="footer__message" placeholder="Message"></textarea>
                         <button class="button footer__button">Send</button>
                         <span class="footer__info">* Required Fields</span>
@@ -322,8 +327,29 @@
             <!-- /.footer-wrapper -->
         </div>
     </footer>
-    <script src="/js/swiper-bundle.min.js"></script>
+    <div class="modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__dialog">
+            <a href="" class="modal__close">
+                <img src="/img/close.svg" alt="Close">
+            </a>
+            <h3 class="modal__title">Send us a message</h3>
+            <form action="send.php" method="POST" class="modal__form">
+                <input
+                    type="text"
+                    class="input modal__input"
+                    placeholder="Your Full Name*"
+                    name="name"
+                />
+                <input type="text" class="input modal__input" placeholder="Phone Number*"name="phone" name="message">
+                <textarea cols="30" rows="10" class="modal__message" placeholder="Message"></textarea>
+                <button class="button modal__button">Send</button>
+                <span class="modal__info">* Required Fields</span>
+            </form>
+        </div>
+    </div>
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/swiper-bundle.min.js"></script> 
     <script src="/js/main.js"></script>
-    <script src="/js/scroll.js"></script>
 </body>
 </html>
